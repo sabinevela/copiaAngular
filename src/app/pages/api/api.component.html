@@ -1,0 +1,22 @@
+<table style="width: 100%; border-collapse: collapse;">
+  <thead>
+    <tr style="background-color: #f2f2f2;">
+      <th style="border: 1px solid #ddd; padding: 12px; text-align: left;">Título</th>
+      <th style="border: 1px solid #ddd; padding: 12px; text-align: left;">Año</th>
+      <th style="border: 1px solid #ddd; padding: 12px; text-align: left;">Descripción</th>
+      <th style="border: 1px solid #ddd; padding: 12px; text-align: left;">Portada</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (pelicula of peliculas; track pelicula.id) {
+      <tr style="border: 1px solid #ddd;">
+        <td style="border: 1px solid #ddd; padding: 10px;">{{pelicula.titulo}}</td>
+        <td style="border: 1px solid #ddd; padding: 10px;">{{pelicula.anio}}</td>
+        <td style="border: 1px solid #ddd; padding: 10px;">{{pelicula.descripcion}}</td>
+        <td style="border: 1px solid #ddd; padding: 10px;">
+          <img [src]="pelicula.imagen" [alt]="pelicula.titulo" style="width: 80px; height: auto; border-radius: 4px;">
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>

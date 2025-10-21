@@ -1,0 +1,11 @@
+h1 {
+  text-shadow: 0 0 10px rgba(0, 128, 0, 0.3);
+}
+
+img {
+  transition: transform 0.4s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+}

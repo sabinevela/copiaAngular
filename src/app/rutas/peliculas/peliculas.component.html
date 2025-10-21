@@ -1,0 +1,10 @@
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+    @for (pelicula of peliculas; track pelicula.id) {
+    <div>
+        <a [routerLink]="['/peliculas', pelicula.id]">
+        <img class="h-auto max-w-full rounded-lg" [src]= "pelicula.portada">
+        </a>
+    </div>
+    
+}
+    <div>
