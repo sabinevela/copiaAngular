@@ -1,0 +1,68 @@
+body {
+  background-color: #fff5f5;
+  font-family: 'Inter', sans-serif;
+}
+
+form {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  max-width: 400px;
+  margin: 3rem auto;
+  border: 2px solid #f44336;
+}
+
+h1 {
+  text-align: center;
+  color: #f44336;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+label {
+  font-weight: 600;
+  color: #333333;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+  border: 1px solid #f44336;
+  margin-bottom: 1rem;
+  transition: border-color 0.3s;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #d32f2f;
+  outline: none;
+}
+
+input[type="checkbox"] {
+  accent-color: #f44336;
+}
+
+button {
+  background-color: #f44336;
+  color: white;
+  font-weight: 600;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #d32f2f;
+}
+
+@media (min-width: 640px) {
+  button {
+    width: auto;
+  }
+}

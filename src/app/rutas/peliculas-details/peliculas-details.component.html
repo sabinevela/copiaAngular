@@ -1,8 +1,27 @@
-@if (pelicula) {
-    <h1>Título:</h1>
-    <h2>{{pelicula.titulo}}</h2>
-    <h1>Descripcion:</h1>
-    <h2>{{pelicula.descripcion}}</h2>
-    <h1>Portada:</h1>
-    <h2>{{pelicula.portada}}</h2>
-}
+<div class="container mx-auto px-4 py-8">
+    @if (pelicula) {
+    <h1 class="text-4xl font-bold text-red-600 text-center mb-8">Detalles de la película</h1>
+
+    <div class="max-w-4xl mx-auto bg-white border-2 border-red-200 rounded-lg shadow-lg overflow-hidden">
+        <div class="md:flex">
+            <div class="md:flex-shrink-0 md:w-1/3 bg-red-50 p-4">
+                <img class="w-full h-auto rounded-lg shadow-md border-2 border-red-300" [src]="pelicula.portada" [alt]="pelicula.titulo">
+            </div>
+            
+            <div class="p-8 md:w-2/3">
+                <div class="mb-6">
+                    <h2 class="text-sm font-semibold text-red-600 uppercase tracking-wide mb-2">Título:</h2>
+                    <p class="text-3xl font-bold text-gray-900">{{pelicula.titulo}}</p>
+                </div>
+
+                <div class="mb-6">
+                    <h2 class="text-sm font-semibold text-red-600 uppercase tracking-wide mb-2">Descripción:</h2>
+                    <p class="text-gray-700 text-lg leading-relaxed">{{pelicula.descripcion}}</p>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+    }
+</div>

@@ -1,10 +1,15 @@
-<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-    @for (pelicula of peliculas; track pelicula.id) {
-    <div>
-        <a [routerLink]="['/peliculas', pelicula.id]">
-        <img class="h-auto max-w-full rounded-lg" [src]= "pelicula.portada">
-        </a>
+<div class="container mx-auto px-4 py-8">
+    <h1 class="text-4xl font-bold text-red-600 text-center mb-8">Rutas Dinámicas</h1>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+        @for (pelicula of peliculas; track pelicula.id) {
+        <div class="bg-white border border-red-300 rounded-lg shadow hover:shadow-xl transition-shadow duration-300">
+            <a [routerLink]="['/peliculas', pelicula.id]">
+                <img class="rounded-t-lg w-full h-auto" [src]="pelicula.portada" alt="">
+                <div class="p-5 bg-red-50 rounded-b-lg">
+                    <h5 class="text-xl font-bold text-red-700">Ver Película</h5>
+                </div>
+            </a>
+        </div>
+        }
     </div>
-    
-}
-    <div>
+</div>
